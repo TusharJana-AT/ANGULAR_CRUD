@@ -13,7 +13,7 @@ export class EditUser {
   name = new FormControl('');
   age = new FormControl('');
   email = new FormControl('');
-
+ 
   constructor(
     private userServices: UserService,
     private activeRouter: ActivatedRoute,
