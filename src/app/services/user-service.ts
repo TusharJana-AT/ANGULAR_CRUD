@@ -12,4 +12,20 @@ export class UserService {
   getUsers(){
     return this.http.get<user[]>(this.url)
   }
+
+  saveUsers(data:user){
+    return this.http.post<user[]>(this.url,data)
+  }
+
+  deleteUser(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+
+  getSingleUser(id:string){
+    return this.http.get<user>(`${this.url}/${id}`)
+  }
+
+  updateUser(data:user,id:string){
+    return this.http.put<user>(`${this.url}/${id}`,data)
+  }
 }

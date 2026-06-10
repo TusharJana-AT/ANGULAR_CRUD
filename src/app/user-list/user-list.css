@@ -1,0 +1,7 @@
+.user-ul{
+    border-bottom: 2px solid black;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
