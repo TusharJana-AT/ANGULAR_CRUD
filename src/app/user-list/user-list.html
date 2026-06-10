@@ -1,0 +1,11 @@
+<p>user-list works!</p>
+
+<ul>
+    @for(user of userData();track user.id){
+        <ul>
+            <li>
+                {{user.name}}
+            </li>
+        </ul>
+    }
+</ul>
