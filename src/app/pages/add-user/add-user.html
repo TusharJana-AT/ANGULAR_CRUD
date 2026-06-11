@@ -1,0 +1,138 @@
+<div class="container mt-8">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-8">
+      <div class="card shadow">
+        <div class="card-header">
+          <h3 class="text-center mb-0">Add User</h3>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="addUser()">
+          <div class="card-body">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" formControlName="name" class="form-control" />
+
+              @if (name?.hasError('required') && name?.touched) {
+                <span class="error">Name is required</span>
+              }
+              @if (name?.hasError('minlength') && name?.touched) {
+                <span class="error">Name must be at least 3 characters</span>
+              }
+
+              @if (name?.hasError('maxlength') && name?.touched) {
+                <span class="error">Name cannot exceed 30 characters</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" />
+              @if (email?.hasError('required') && email?.touched) {
+                <span class="error">Email is required</span>
+              }
+              @if (email?.hasError('email') && email?.touched) {
+                <span class="error">Enter Valid Email</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="text" formControlName="phone" class="form-control" />
+              @if (phone?.hasError('required') && phone?.touched) {
+                <span class="error">Phone number is required</span>
+              }
+
+              @if (phone?.hasError('pattern') && phone?.touched) {
+                <span class="error">Phone number must contain exactly 10 digits</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Age</label>
+              <input type="number" formControlName="age" class="form-control" />
+              @if (age?.hasError('required') && age?.touched) {
+                <span class="error">Age is required</span>
+              }
+
+              @if (age?.hasError('max') && age?.touched) {
+                <span class="error">Age cannot be greater than 120</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label d-block">Gender</label>
+
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  value="Male"
+                  formControlName="gender"
+                />
+
+                <label class="form-check-label"> Male </label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  value="Female"
+                  formControlName="gender"
+                />
+
+                <label class="form-check-label"> Female </label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  value="Other"
+                  formControlName="gender"
+                />
+
+                <label class="form-check-label"> Other </label>
+              </div>
+              @if (gender?.hasError('required') && gender?.touched) {
+                <span class="error">Please select a gender</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Country</label>
+
+              <select formControlName="country" class="form-select">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+              </select>
+              @if (country?.hasError('required') && country?.touched) {
+                <span class="error">Please select a country</span>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Address</label>
+
+              <textarea rows="4" formControlName="address" class="form-control"> </textarea>
+              @if (address?.hasError('required') && address?.touched) {
+                <span class="error">Address is required</span>
+              }
+
+              @if (address?.hasError('minlength') && address?.touched) {
+                <span class="error">Address must be at least 10 characters long</span>
+              } 
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+                Add User
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

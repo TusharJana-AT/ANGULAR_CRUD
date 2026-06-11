@@ -1,0 +1,48 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  imports: [ReactiveFormsModule],
+  templateUrl: './login.html',
+})
+export class Login {
+  loginForm: FormGroup;
+  errorMessage = '';
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    const { email, password } = this.loginForm.value;
+
+    const demoUser = {
+      email: 'tj@gmail.com',
+      password: '123456'
+    };
+
+    if (
+      email === demoUser.email &&
+      password === demoUser.password
+    ) {
+      localStorage.setItem('token', 'demo-jwt-token');
+      localStorage.setItem('user', JSON.stringify({
+        email: demoUser.email
+      }));
+
+      alert('Login Successful');
+
+      this.router.navigate(['/']);
+    } else {
+      this.errorMessage = 'Invalid Email or Password';
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@if(isLoggedIn()) {
+
+<nav>
+  <ul>
+    <li>
+      <a routerLink="">User List</a>
+    </li>
+
+    <li>
+      <a routerLink="add">Add User</a>
+    </li>
+
+    <li>
+      <button (click)="logout()">
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>
+
+}

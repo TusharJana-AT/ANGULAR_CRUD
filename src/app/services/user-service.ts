@@ -6,7 +6,7 @@ import { user } from './user-interface';
   providedIn: 'root',
 })
 export class UserService {
-  url="http://localhost:3000/users"
+  url="http://localhost:3000/usersData"
   constructor(private http:HttpClient){}
 
   getUsers(){
@@ -17,7 +17,7 @@ export class UserService {
     return this.http.post<user[]>(this.url,data)
   }
 
-  deleteUser(id:number){
+  deleteUser(id:number|undefined){
     return this.http.delete(`${this.url}/${id}`)
   }
 

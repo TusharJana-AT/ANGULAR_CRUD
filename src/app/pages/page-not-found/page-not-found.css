@@ -1,0 +1,19 @@
+.not-found {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #000;
+}

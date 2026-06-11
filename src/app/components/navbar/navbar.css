@@ -1,0 +1,15 @@
+nav {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
