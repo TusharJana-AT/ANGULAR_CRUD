@@ -1,0 +1,83 @@
+{
+  "usersData": [
+    {
+      "id": "1",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@example.com",
+      "password": "Rahul@123",
+      "phone": "9876543210",
+      "age": 25,
+      "gender": "Male",
+      "country": "India",
+      "address": "123 MG Road, Bangalore, Karnataka",
+      "acceptTerms": true
+    },
+    {
+      "name": "Priya Patel",
+      "age": 28,
+      "email": "priya.patel@example.com",
+      "phone": 9876543211,
+      "gender": "Female",
+      "country": "Canada",
+      "address": "45 University Road, Ahmedabad, Gujarat",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Amit Verma",
+      "email": "amit.verma@example.com",
+      "password": "Amit@123",
+      "phone": "9876543212",
+      "age": 32,
+      "gender": "Male",
+      "country": "India",
+      "address": "78 Park Street, Kolkata, West Bengal",
+      "acceptTerms": true
+    },
+    {
+      "id": "4",
+      "name": "Sneha Reddy",
+      "email": "sneha.reddy@example.com",
+      "password": "Sneha@123",
+      "phone": "9876543213",
+      "age": 24,
+      "gender": "Female",
+      "country": "India",
+      "address": "12 Jubilee Hills, Hyderabad, Telangana",
+      "acceptTerms": true
+    },
+    {
+      "id": "5",
+      "name": "Arjun Singh",
+      "email": "arjun.singh@example.com",
+      "password": "Arjun@123",
+      "phone": "9876543214",
+      "age": 30,
+      "gender": "Male",
+      "country": "India",
+      "address": "56 Civil Lines, Jaipur, Rajasthan",
+      "acceptTerms": true
+    },
+    {
+      "name": "sds",
+      "age": 23,
+      "email": "tusharjana.aj3@gmail.com",
+      "phone": 4564564564,
+      "gender": "Male",
+      "country": "USA",
+      "address": "Flat no. 401, MAHAVIR APPT., BEDINAKA TOWER, NAKALANK CHOWK, RAJKOT, GUJARAT - 360001",
+      "id": "r33sU4yrsMA"
+    },
+    {
+      "name": "sssssssssssss",
+      "age": 23,
+      "email": "tuwwwwa.aj3@gmail.com",
+      "phone": 4564564564,
+      "gender": "Male",
+      "country": "Canada",
+      "address": "Flat no. 33401,ddfffffvfvER, NAKALANK CHddffffffffffRAT - 360001",
+      "id": "VPpTYa_gltE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
