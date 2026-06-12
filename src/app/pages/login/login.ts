@@ -38,7 +38,6 @@ export class Login {
         email: demoUser.email
       }));
 
-      alert('Login Successful');
 
       this.router.navigate(['/']);
     } else {

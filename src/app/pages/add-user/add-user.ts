@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../services/user-service';
-import { user } from '../../services/user-interface';
+import { user } from '../../models/user-interface';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './add-user.css',
 })
 export class AddUser {
-  private fb = inject(FormBuilder).nonNullable;
+  private fb = inject(FormBuilder)
 
   loginForm = this.fb.group({
     name: ['', [Validators.required, Validators.maxLength(30), Validators.minLength(3)]],
@@ -22,6 +22,7 @@ export class AddUser {
     country: ['', [Validators.required]],
     address: ['', [Validators.required, Validators.minLength(10)]],
   });
+
 
   get name() {
     return this.loginForm.get('name');
